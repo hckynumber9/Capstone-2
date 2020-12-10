@@ -1,6 +1,5 @@
-def seasons(df, season):
+def seasons(df, filtered_df):
     
-    filtered = season_team[season_team.season == season]
 
     # now calc cumulative stats
     filtered['gpg'] = (filtered.groupby('team_id')['goals'].cumsum() - filtered['goals']) /           filtered.groupby('team_id').cumcount()
